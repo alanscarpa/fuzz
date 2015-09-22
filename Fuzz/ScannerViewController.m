@@ -29,7 +29,6 @@ static int kMSResultTypes = MSResultTypeImage  |
                             MSResultTypeEAN13;
 
 
-
 @interface ScannerViewController () <MSAutoScannerSessionDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *scanBounds;

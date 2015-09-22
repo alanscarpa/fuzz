@@ -12,5 +12,4 @@
 
 extern NSString *const MS_API_KEY;
 extern NSString *const MS_API_SECRET;
-
 @end

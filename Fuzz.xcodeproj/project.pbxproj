@@ -16,7 +16,7 @@
 		457536A11BB0B2BA00F6EAA4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457536A01BB0B2BA00F6EAA4 /* Storyboard.storyboard */; settings = {ASSET_TAGS = (); }; };
 		457536A51BB1CFDF00F6EAA4 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536A41BB1CFDF00F6EAA4 /* TabBarViewController.m */; settings = {ASSET_TAGS = (); }; };
 		457536A91BB1DB0100F6EAA4 /* UIImage+Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536A81BB1DB0100F6EAA4 /* UIImage+Overlay.m */; settings = {ASSET_TAGS = (); }; };
-		457536AE1BB1E99100F6EAA4 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536AD1BB1E99100F6EAA4 /* Constants.m */; settings = {ASSET_TAGS = (); }; };
+		457536B21BB1EC8E00F6EAA4 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536B11BB1EC8E00F6EAA4 /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		82CAC14D18BBA03D0082342E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14C18BBA03D0082342E /* Foundation.framework */; };
 		82CAC14F18BBA03D0082342E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14E18BBA03D0082342E /* CoreGraphics.framework */; };
 		82CAC15118BBA03D0082342E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC15018BBA03D0082342E /* UIKit.framework */; };
@@ -53,8 +53,8 @@
 		457536A41BB1CFDF00F6EAA4 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = Fuzz/TabBarViewController.m; sourceTree = SOURCE_ROOT; };
 		457536A71BB1DB0100F6EAA4 /* UIImage+Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Overlay.h"; path = "Fuzz/UIImage+Overlay.h"; sourceTree = SOURCE_ROOT; };
 		457536A81BB1DB0100F6EAA4 /* UIImage+Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Overlay.m"; path = "Fuzz/UIImage+Overlay.m"; sourceTree = SOURCE_ROOT; };
-		457536AC1BB1E99100F6EAA4 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Fuzz/Constants.h; sourceTree = SOURCE_ROOT; };
-		457536AD1BB1E99100F6EAA4 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Fuzz/Constants.m; sourceTree = SOURCE_ROOT; };
+		457536B01BB1EC8E00F6EAA4 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Fuzz/Constants.h; sourceTree = SOURCE_ROOT; };
+		457536B11BB1EC8E00F6EAA4 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Fuzz/Constants.m; sourceTree = SOURCE_ROOT; };
 		823A899718BE017A00C3993E /* Moodstocks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moodstocks.framework; sourceTree = "<group>"; };
 		82CAC14918BBA03D0082342E /* Fuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CAC14C18BBA03D0082342E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -126,8 +126,8 @@
 		457536AF1BB1EAA900F6EAA4 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				457536AC1BB1E99100F6EAA4 /* Constants.h */,
-				457536AD1BB1E99100F6EAA4 /* Constants.m */,
+				457536B01BB1EC8E00F6EAA4 /* Constants.h */,
+				457536B11BB1EC8E00F6EAA4 /* Constants.m */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 				457536991BB0A32C00F6EAA4 /* main.m in Sources */,
 				450886161BB0A19D007E8E8D /* ScannerViewController.m in Sources */,
 				457536A91BB1DB0100F6EAA4 /* UIImage+Overlay.m in Sources */,
-				457536AE1BB1E99100F6EAA4 /* Constants.m in Sources */,
+				457536B21BB1EC8E00F6EAA4 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
