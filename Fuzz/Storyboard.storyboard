@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8h5-qc-RD2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Scan!-->
+        <scene sceneID="PrT-ZM-8zK">
+            <objects>
+                <viewController id="uvp-Zg-4xn" customClass="ScannerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LTL-eo-HXp"/>
+                        <viewControllerLayoutGuide type="bottom" id="uvZ-8y-h0z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s4A-Ct-wEg" userLabel="Video Layer View">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vyk-3X-9ns">
+                                <rect key="frame" x="45" y="135" width="510" height="330"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.3803921569" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vyk-3X-9ns" firstAttribute="height" secondItem="s4A-Ct-wEg" secondAttribute="height" multiplier="0.55" id="3L5-EG-dc9"/>
+                            <constraint firstItem="Vyk-3X-9ns" firstAttribute="centerY" secondItem="s4A-Ct-wEg" secondAttribute="centerY" id="CuA-pc-LG5"/>
+                            <constraint firstItem="Vyk-3X-9ns" firstAttribute="width" secondItem="s4A-Ct-wEg" secondAttribute="width" multiplier="0.85" id="Tqd-VG-C4x"/>
+                            <constraint firstItem="Vyk-3X-9ns" firstAttribute="centerX" secondItem="s4A-Ct-wEg" secondAttribute="centerX" id="Upz-89-pAs"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scan!" id="Tmc-cY-V9n"/>
+                    <connections>
+                        <outlet property="scanBounds" destination="Vyk-3X-9ns" id="W7x-ex-mFi"/>
+                        <outlet property="videoPreview" destination="s4A-Ct-wEg" id="quW-T8-aUZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QVJ-S2-2Y3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194" y="144"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qzR-Wn-pgb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8h5-qc-RD2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="9lX-vN-u24">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aHa-dJ-oiv" kind="relationship" relationship="viewControllers" id="4nu-yP-fpS"/>
+                        <segue destination="uvp-Zg-4xn" kind="relationship" relationship="viewControllers" id="nyX-rg-rWd"/>
+                        <segue destination="y1w-RA-NFk" kind="relationship" relationship="viewControllers" id="LwY-4B-LZB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dk1-TK-vTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="382" y="144"/>
+        </scene>
+        <!--Fuzz Feed-->
+        <scene sceneID="eZh-7f-iT2">
+            <objects>
+                <viewController id="aHa-dJ-oiv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2UU-tI-CUU"/>
+                        <viewControllerLayoutGuide type="bottom" id="1r5-rt-OrC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xCV-Mw-3WM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fuzz Feed" id="Jis-jL-Czg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dn1-6Q-aRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1214" y="892"/>
+        </scene>
+        <!--Fuzz Box-->
+        <scene sceneID="Ydq-5N-bEe">
+            <objects>
+                <viewController id="y1w-RA-NFk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n6v-pV-gkW"/>
+                        <viewControllerLayoutGuide type="bottom" id="hzm-s4-Gxw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="32V-q4-55t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fuzz Box" id="iD3-Nn-pwa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USp-Rw-Ag4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1214" y="1605"/>
+        </scene>
+    </scenes>
+</document>
