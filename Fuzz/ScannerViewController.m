@@ -25,9 +25,13 @@ static int kMSResultTypes = MSResultTypeImage  |
     [super viewDidLoad];
     [self setUpUI];
     [self initializeScanner];
-    
-   
 
+
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 -(void)setUpUI
@@ -36,8 +40,15 @@ static int kMSResultTypes = MSResultTypeImage  |
     self.notScanningButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     self.notScanningButton.titleLabel.minimumScaleFactor = 0.7;
     self.notScanningButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    
 }
 
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
 
 -(void)setUpScannerOverlay
 {

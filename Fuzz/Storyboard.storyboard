@@ -5,7 +5,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Scan!-->
+        <!--Scanner View Controller-->
         <scene sceneID="PrT-ZM-8zK">
             <objects>
                 <viewController id="uvp-Zg-4xn" customClass="ScannerViewController" sceneMemberID="viewController">
@@ -36,6 +36,9 @@
                                 <state key="normal" title="Not Scanning?  Check Available Logos Here!">
                                     <color key="titleColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="3Mn-hv-g1L" kind="show" id="uu4-3u-MhY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,7 +63,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Scan!" id="Tmc-cY-V9n"/>
+                    <navigationItem key="navigationItem" id="LSu-mL-jWl"/>
                     <connections>
                         <outlet property="notScanningButton" destination="b9F-2A-yfD" id="HM3-5T-Hg2"/>
                         <outlet property="scanBounds" destination="Vyk-3X-9ns" id="W7x-ex-mFi"/>
@@ -69,7 +72,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVJ-S2-2Y3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194" y="144"/>
+            <point key="canvasLocation" x="2216" y="144"/>
+        </scene>
+        <!--Available Logos Table View Controller-->
+        <scene sceneID="v9M-el-d8G">
+            <objects>
+                <tableViewController id="3Mn-hv-g1L" customClass="AvailableLogosTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Jk-bg-f6z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wQg-hb-e9W">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wQg-hb-e9W" id="KM8-WL-aQc">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3Mn-hv-g1L" id="3w0-Ws-mzZ"/>
+                            <outlet property="delegate" destination="3Mn-hv-g1L" id="iL0-bt-JKa"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rhN-Lb-f55" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2891" y="144"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="qzR-Wn-pgb">
@@ -84,7 +115,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="aHa-dJ-oiv" kind="relationship" relationship="viewControllers" id="4nu-yP-fpS"/>
-                        <segue destination="uvp-Zg-4xn" kind="relationship" relationship="viewControllers" id="nyX-rg-rWd"/>
+                        <segue destination="L22-sl-iqB" kind="relationship" relationship="viewControllers" id="nyX-rg-rWd"/>
                         <segue destination="y1w-RA-NFk" kind="relationship" relationship="viewControllers" id="LwY-4B-LZB"/>
                     </connections>
                 </tabBarController>
@@ -95,7 +126,7 @@
         <!--Fuzz Feed-->
         <scene sceneID="eZh-7f-iT2">
             <objects>
-                <viewController id="aHa-dJ-oiv" sceneMemberID="viewController">
+                <viewController id="aHa-dJ-oiv" customClass="FeedViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2UU-tI-CUU"/>
                         <viewControllerLayoutGuide type="bottom" id="1r5-rt-OrC"/>
@@ -111,10 +142,10 @@
             </objects>
             <point key="canvasLocation" x="1214" y="892"/>
         </scene>
-        <!--Fuzz Box-->
+        <!--Rewards-->
         <scene sceneID="Ydq-5N-bEe">
             <objects>
-                <viewController id="y1w-RA-NFk" sceneMemberID="viewController">
+                <viewController id="y1w-RA-NFk" customClass="RewardsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n6v-pV-gkW"/>
                         <viewControllerLayoutGuide type="bottom" id="hzm-s4-Gxw"/>
@@ -124,11 +155,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fuzz Box" id="iD3-Nn-pwa"/>
+                    <tabBarItem key="tabBarItem" title="Rewards" id="iD3-Nn-pwa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USp-Rw-Ag4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1214" y="1605"/>
+        </scene>
+        <!--Scan!-->
+        <scene sceneID="lFa-5w-oS7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L22-sl-iqB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Scan!" id="Tmc-cY-V9n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fZT-VJ-3GU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uvp-Zg-4xn" kind="relationship" relationship="rootViewController" id="lnb-gS-Q28"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXC-3M-2Qg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="144"/>
         </scene>
     </scenes>
 </document>

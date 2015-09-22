@@ -17,8 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTabBarIcons];
+    [self setUpUI];
+    
 }
+
+-(void)setUpUI
+{
+   [self setTabBarIcons];
+}
+
 
 
 -(void)setTabBarIcons
@@ -48,11 +55,11 @@
 
     UIImage *scanIcon = [[UIImage imageNamed:@"scanIcon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIImage *feedIcon = [UIImage imageNamed:@"feedIcon"];
-    UIImage *boxIcon = [UIImage imageNamed:@"boxIcon"];
+    UIImage *rewardsIcon = [UIImage imageNamed:@"rewardsIcon"];
     
     self.viewControllers[0].tabBarItem.image = [self imageWithImage:feedIcon scaledToSize:CGSizeMake(28, 28)];
     self.viewControllers[1].tabBarItem.image = [self imageWithImage:scanIcon scaledToSize:CGSizeMake(28, 28)];
-    self.viewControllers[2].tabBarItem.image = [self imageWithImage:boxIcon scaledToSize:CGSizeMake(28, 28)];
+    self.viewControllers[2].tabBarItem.image = [self imageWithImage:rewardsIcon scaledToSize:CGSizeMake(28, 28)];
     
     
     
