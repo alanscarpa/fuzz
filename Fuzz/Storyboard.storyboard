@@ -40,14 +40,16 @@
             </objects>
             <point key="canvasLocation" x="1194" y="144"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="qzR-Wn-pgb">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8h5-qc-RD2" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8h5-qc-RD2" customClass="TabBarViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="9lX-vN-u24">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94568800929999997" green="0.34611855850000001" blue="0.7905888391" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="0.29803921568627451" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="aHa-dJ-oiv" kind="relationship" relationship="viewControllers" id="4nu-yP-fpS"/>

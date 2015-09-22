@@ -10,11 +10,13 @@
 		450886141BB0A19D007E8E8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4508860E1BB0A19D007E8E8D /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		450886151BB0A19D007E8E8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450886101BB0A19D007E8E8D /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
 		450886161BB0A19D007E8E8D /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450886121BB0A19D007E8E8D /* ScannerViewController.m */; settings = {ASSET_TAGS = (); }; };
-		450886171BB0A19D007E8E8D /* ScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 450886131BB0A19D007E8E8D /* ScannerViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		455A7EC31BAFC199006B39E3 /* Moodstocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455A7EC21BAFC199006B39E3 /* Moodstocks.framework */; settings = {ASSET_TAGS = (); }; };
 		457536981BB0A32C00F6EAA4 /* Fuzz-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 457536951BB0A32C00F6EAA4 /* Fuzz-info.plist */; settings = {ASSET_TAGS = (); }; };
 		457536991BB0A32C00F6EAA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536971BB0A32C00F6EAA4 /* main.m */; settings = {ASSET_TAGS = (); }; };
 		457536A11BB0B2BA00F6EAA4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457536A01BB0B2BA00F6EAA4 /* Storyboard.storyboard */; settings = {ASSET_TAGS = (); }; };
+		457536A51BB1CFDF00F6EAA4 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536A41BB1CFDF00F6EAA4 /* TabBarViewController.m */; settings = {ASSET_TAGS = (); }; };
+		457536A91BB1DB0100F6EAA4 /* UIImage+Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536A81BB1DB0100F6EAA4 /* UIImage+Overlay.m */; settings = {ASSET_TAGS = (); }; };
+		457536AE1BB1E99100F6EAA4 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536AD1BB1E99100F6EAA4 /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		82CAC14D18BBA03D0082342E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14C18BBA03D0082342E /* Foundation.framework */; };
 		82CAC14F18BBA03D0082342E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14E18BBA03D0082342E /* CoreGraphics.framework */; };
 		82CAC15118BBA03D0082342E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC15018BBA03D0082342E /* UIKit.framework */; };
@@ -43,11 +45,16 @@
 		450886101BB0A19D007E8E8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Fuzz/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		450886111BB0A19D007E8E8D /* ScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScannerViewController.h; path = Fuzz/ScannerViewController.h; sourceTree = SOURCE_ROOT; };
 		450886121BB0A19D007E8E8D /* ScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScannerViewController.m; path = Fuzz/ScannerViewController.m; sourceTree = SOURCE_ROOT; };
-		450886131BB0A19D007E8E8D /* ScannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScannerViewController.xib; path = Fuzz/ScannerViewController.xib; sourceTree = SOURCE_ROOT; };
 		455A7EC21BAFC199006B39E3 /* Moodstocks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moodstocks.framework; sourceTree = SOURCE_ROOT; };
 		457536951BB0A32C00F6EAA4 /* Fuzz-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Fuzz-info.plist"; path = "Fuzz/Fuzz-info.plist"; sourceTree = SOURCE_ROOT; };
 		457536971BB0A32C00F6EAA4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Fuzz/main.m; sourceTree = SOURCE_ROOT; };
 		457536A01BB0B2BA00F6EAA4 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = Fuzz/Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
+		457536A31BB1CFDF00F6EAA4 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = Fuzz/TabBarViewController.h; sourceTree = SOURCE_ROOT; };
+		457536A41BB1CFDF00F6EAA4 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = Fuzz/TabBarViewController.m; sourceTree = SOURCE_ROOT; };
+		457536A71BB1DB0100F6EAA4 /* UIImage+Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Overlay.h"; path = "Fuzz/UIImage+Overlay.h"; sourceTree = SOURCE_ROOT; };
+		457536A81BB1DB0100F6EAA4 /* UIImage+Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Overlay.m"; path = "Fuzz/UIImage+Overlay.m"; sourceTree = SOURCE_ROOT; };
+		457536AC1BB1E99100F6EAA4 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Fuzz/Constants.h; sourceTree = SOURCE_ROOT; };
+		457536AD1BB1E99100F6EAA4 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Fuzz/Constants.m; sourceTree = SOURCE_ROOT; };
 		823A899718BE017A00C3993E /* Moodstocks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moodstocks.framework; sourceTree = "<group>"; };
 		82CAC14918BBA03D0082342E /* Fuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CAC14C18BBA03D0082342E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,6 +95,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		457536A61BB1DADE00F6EAA4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				457536A71BB1DB0100F6EAA4 /* UIImage+Overlay.h */,
+				457536A81BB1DB0100F6EAA4 /* UIImage+Overlay.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		457536AA1BB1E95300F6EAA4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				457536A31BB1CFDF00F6EAA4 /* TabBarViewController.h */,
+				457536A41BB1CFDF00F6EAA4 /* TabBarViewController.m */,
+				450886111BB0A19D007E8E8D /* ScannerViewController.h */,
+				450886121BB0A19D007E8E8D /* ScannerViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		457536AB1BB1E95C00F6EAA4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				457536A01BB0B2BA00F6EAA4 /* Storyboard.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		457536AF1BB1EAA900F6EAA4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				457536AC1BB1E99100F6EAA4 /* Constants.h */,
+				457536AD1BB1E99100F6EAA4 /* Constants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		82CAC14018BBA03D0082342E = {
 			isa = PBXGroup;
 			children = (
@@ -125,13 +169,10 @@
 		82CAC15218BBA03D0082342E /* Fuzz */ = {
 			isa = PBXGroup;
 			children = (
-				457536A01BB0B2BA00F6EAA4 /* Storyboard.storyboard */,
-				4508860D1BB0A19D007E8E8D /* AppDelegate.h */,
-				4508860E1BB0A19D007E8E8D /* AppDelegate.m */,
+				457536AB1BB1E95C00F6EAA4 /* Views */,
+				457536AA1BB1E95300F6EAA4 /* Controllers */,
+				457536A61BB1DADE00F6EAA4 /* Categories */,
 				450886101BB0A19D007E8E8D /* Images.xcassets */,
-				450886111BB0A19D007E8E8D /* ScannerViewController.h */,
-				450886121BB0A19D007E8E8D /* ScannerViewController.m */,
-				450886131BB0A19D007E8E8D /* ScannerViewController.xib */,
 				82CAC15318BBA03D0082342E /* Supporting Files */,
 			);
 			name = Fuzz;
@@ -141,6 +182,9 @@
 		82CAC15318BBA03D0082342E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				457536AF1BB1EAA900F6EAA4 /* Constants */,
+				4508860D1BB0A19D007E8E8D /* AppDelegate.h */,
+				4508860E1BB0A19D007E8E8D /* AppDelegate.m */,
 				4508860F1BB0A19D007E8E8D /* Fuzz-Prefix.pch */,
 				457536951BB0A32C00F6EAA4 /* Fuzz-info.plist */,
 				457536971BB0A32C00F6EAA4 /* main.m */,
@@ -229,7 +273,6 @@
 				450886151BB0A19D007E8E8D /* Images.xcassets in Resources */,
 				457536A11BB0B2BA00F6EAA4 /* Storyboard.storyboard in Resources */,
 				457536981BB0A32C00F6EAA4 /* Fuzz-info.plist in Resources */,
-				450886171BB0A19D007E8E8D /* ScannerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,9 +290,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457536A51BB1CFDF00F6EAA4 /* TabBarViewController.m in Sources */,
 				450886141BB0A19D007E8E8D /* AppDelegate.m in Sources */,
 				457536991BB0A32C00F6EAA4 /* main.m in Sources */,
 				450886161BB0A19D007E8E8D /* ScannerViewController.m in Sources */,
+				457536A91BB1DB0100F6EAA4 /* UIImage+Overlay.m in Sources */,
+				457536AE1BB1E99100F6EAA4 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

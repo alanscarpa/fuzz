@@ -22,13 +22,13 @@
  */
 
 #import "ScannerViewController.h"
+#import "Constants.h"
 
 static int kMSResultTypes = MSResultTypeImage  |
                             MSResultTypeQRCode |
                             MSResultTypeEAN13;
 
-#define MS_API_KEY    @"cgxz7hy55uckm98aqz6a"
-#define MS_API_SECRET @"dQIIY4amYf2Zh4YP"
+
 
 @interface ScannerViewController () <MSAutoScannerSessionDelegate>
 
@@ -51,9 +51,13 @@ static int kMSResultTypes = MSResultTypeImage  |
 {
     [super viewDidLoad];
     
+    
+
+    
+    
     self.scanBounds.backgroundColor = [UIColor clearColor];
     self.scanBounds.layer.borderWidth = 3.0f;
-    self.scanBounds.layer.borderColor = [UIColor redColor].CGColor;
+    self.scanBounds.layer.borderColor = [UIColor colorWithRed:229/255.0f green:68/255.0f blue:0/255.0f alpha:1].CGColor;
     
     [self initializeScanner];
     _scannerSession = [[MSAutoScannerSession alloc] initWithScanner:_scanner];
@@ -71,6 +75,7 @@ static int kMSResultTypes = MSResultTypeImage  |
     
     [_scannerSession startRunning];
 }
+
 
 
 
