@@ -27,5 +27,4 @@
 @interface ScannerViewController : UIViewController
 
 @property MSScanner *scanner;
-
 @end
