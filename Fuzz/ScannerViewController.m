@@ -1,5 +1,6 @@
 #import "ScannerViewController.h"
 #import "Constants.h"
+#import "SVProgressHUD.h"
 
 static int kMSResultTypes = MSResultTypeImage  |
                             MSResultTypeQRCode |
@@ -23,6 +24,8 @@ static int kMSResultTypes = MSResultTypeImage  |
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [SVProgressHUD show];
+    
     [self setUpUI];
     [self initializeScanner];
 
@@ -36,6 +39,7 @@ static int kMSResultTypes = MSResultTypeImage  |
 
 -(void)setUpUI
 {
+    
     [self setUpScannerOverlay];
     self.notScanningButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     self.notScanningButton.titleLabel.minimumScaleFactor = 0.7;
@@ -69,10 +73,13 @@ static int kMSResultTypes = MSResultTypeImage  |
             NSLog(@"Sync failed with error: %@", [error ms_message]);
         else
             NSLog(@"Sync succeeded (%li images(s))", (long)[_scanner count:nil]);
+            [SVProgressHUD dismiss];
+        
     };
     
     void (^progressionBlock)(NSInteger) = ^(NSInteger percent) {
         NSLog(@"Sync progressing: %li%%", (long)percent);
+        
     };
     
     // Launch the synchronization
@@ -101,11 +108,11 @@ static int kMSResultTypes = MSResultTypeImage  |
 - (void)session:(id)scannerSession didFindResult:(MSResult *)result
 {
     
-    NSString *title = [result type] == MSResultTypeImage ? @"Image" : @"Barcode";
-    NSString *message = [NSString stringWithFormat:@"%@:\n%@", title, [result string]];
+    NSString *type = [result type] == MSResultTypeImage ? @"Image" : @"Barcode";
+    NSString *message = [NSString stringWithFormat:@"%@", [result string]];
     
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:type message:message preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [_scannerSession resumeProcessing];

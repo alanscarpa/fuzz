@@ -20,6 +20,10 @@
 		457536B51BB2045C00F6EAA4 /* AvailableLogosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536B41BB2045C00F6EAA4 /* AvailableLogosTableViewController.m */; };
 		457536B81BB20B1000F6EAA4 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536B71BB20B1000F6EAA4 /* FeedViewController.m */; };
 		457536BB1BB20B2A00F6EAA4 /* RewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536BA1BB20B2A00F6EAA4 /* RewardsViewController.m */; };
+		45AED1E81BB46EC900324092 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED1E11BB46EC900324092 /* SVIndefiniteAnimatedView.m */; settings = {ASSET_TAGS = (); }; };
+		45AED1E91BB46EC900324092 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45AED1E31BB46EC900324092 /* SVProgressHUD.bundle */; settings = {ASSET_TAGS = (); }; };
+		45AED1EA1BB46EC900324092 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED1E51BB46EC900324092 /* SVProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
+		45AED1EB1BB46EC900324092 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED1E71BB46EC900324092 /* SVRadialGradientLayer.m */; settings = {ASSET_TAGS = (); }; };
 		82CAC14D18BBA03D0082342E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14C18BBA03D0082342E /* Foundation.framework */; };
 		82CAC14F18BBA03D0082342E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14E18BBA03D0082342E /* CoreGraphics.framework */; };
 		82CAC15118BBA03D0082342E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC15018BBA03D0082342E /* UIKit.framework */; };
@@ -52,7 +56,14 @@
 		457536B71BB20B1000F6EAA4 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedViewController.m; path = Fuzz/FeedViewController.m; sourceTree = SOURCE_ROOT; };
 		457536B91BB20B2A00F6EAA4 /* RewardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RewardsViewController.h; path = Fuzz/RewardsViewController.h; sourceTree = SOURCE_ROOT; };
 		457536BA1BB20B2A00F6EAA4 /* RewardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RewardsViewController.m; path = Fuzz/RewardsViewController.m; sourceTree = SOURCE_ROOT; };
-		823A899718BE017A00C3993E /* Moodstocks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Moodstocks.framework; sourceTree = "<group>"; };
+		45AED1E01BB46EC900324092 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		45AED1E11BB46EC900324092 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		45AED1E21BB46EC900324092 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		45AED1E31BB46EC900324092 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		45AED1E41BB46EC900324092 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		45AED1E51BB46EC900324092 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		45AED1E61BB46EC900324092 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		45AED1E71BB46EC900324092 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		82CAC14918BBA03D0082342E /* Fuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CAC14C18BBA03D0082342E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82CAC14E18BBA03D0082342E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +136,21 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		45AED1DF1BB46EC900324092 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				45AED1E01BB46EC900324092 /* SVIndefiniteAnimatedView.h */,
+				45AED1E11BB46EC900324092 /* SVIndefiniteAnimatedView.m */,
+				45AED1E21BB46EC900324092 /* SVProgressHUD-Prefix.pch */,
+				45AED1E31BB46EC900324092 /* SVProgressHUD.bundle */,
+				45AED1E41BB46EC900324092 /* SVProgressHUD.h */,
+				45AED1E51BB46EC900324092 /* SVProgressHUD.m */,
+				45AED1E61BB46EC900324092 /* SVRadialGradientLayer.h */,
+				45AED1E71BB46EC900324092 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		82CAC14018BBA03D0082342E = {
 			isa = PBXGroup;
 			children = (
@@ -145,12 +171,12 @@
 		82CAC14B18BBA03D0082342E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45AED1DF1BB46EC900324092 /* SVProgressHUD */,
 				455A7EC21BAFC199006B39E3 /* Moodstocks.framework */,
 				82CAC18518BBA1240082342E /* AVFoundation.framework */,
 				82CAC18318BBA11E0082342E /* CoreMedia.framework */,
 				82CAC18118BBA1190082342E /* CoreVideo.framework */,
 				82CAC17F18BBA1150082342E /* QuartzCore.framework */,
-				823A899718BE017A00C3993E /* Moodstocks.framework */,
 				82CAC14C18BBA03D0082342E /* Foundation.framework */,
 				82CAC14E18BBA03D0082342E /* CoreGraphics.framework */,
 				82CAC15018BBA03D0082342E /* UIKit.framework */,
@@ -242,6 +268,7 @@
 				450886151BB0A19D007E8E8D /* Images.xcassets in Resources */,
 				457536A11BB0B2BA00F6EAA4 /* Storyboard.storyboard in Resources */,
 				457536981BB0A32C00F6EAA4 /* Fuzz-info.plist in Resources */,
+				45AED1E91BB46EC900324092 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,9 +284,12 @@
 				457536B81BB20B1000F6EAA4 /* FeedViewController.m in Sources */,
 				457536991BB0A32C00F6EAA4 /* main.m in Sources */,
 				450886161BB0A19D007E8E8D /* ScannerViewController.m in Sources */,
+				45AED1E81BB46EC900324092 /* SVIndefiniteAnimatedView.m in Sources */,
 				457536A91BB1DB0100F6EAA4 /* UIImage+Overlay.m in Sources */,
+				45AED1EB1BB46EC900324092 /* SVRadialGradientLayer.m in Sources */,
 				457536B21BB1EC8E00F6EAA4 /* Constants.m in Sources */,
 				457536B51BB2045C00F6EAA4 /* AvailableLogosTableViewController.m in Sources */,
+				45AED1EA1BB46EC900324092 /* SVProgressHUD.m in Sources */,
 				457536BB1BB20B2A00F6EAA4 /* RewardsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
