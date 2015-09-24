@@ -22,13 +22,8 @@
  */
 
 #import "AppDelegate.h"
-
 #import <Moodstocks/Moodstocks.h>
-
 #import "ScannerViewController.h"
-
-#define MS_API_KEY    @"cgxz7hy55uckm98aqz6a" 
-#define MS_API_SECRET @"dQIIY4amYf2Zh4YP"
 
 @implementation AppDelegate {
     MSScanner *_scanner;
