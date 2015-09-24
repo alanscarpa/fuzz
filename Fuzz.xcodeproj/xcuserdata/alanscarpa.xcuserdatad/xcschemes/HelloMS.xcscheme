@@ -96,6 +96,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "Fuzz"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

@@ -7,39 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		450886141BB0A19D007E8E8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4508860E1BB0A19D007E8E8D /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		450886151BB0A19D007E8E8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450886101BB0A19D007E8E8D /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		450886161BB0A19D007E8E8D /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450886121BB0A19D007E8E8D /* ScannerViewController.m */; settings = {ASSET_TAGS = (); }; };
-		455A7EC31BAFC199006B39E3 /* Moodstocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455A7EC21BAFC199006B39E3 /* Moodstocks.framework */; settings = {ASSET_TAGS = (); }; };
-		457536981BB0A32C00F6EAA4 /* Fuzz-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 457536951BB0A32C00F6EAA4 /* Fuzz-info.plist */; settings = {ASSET_TAGS = (); }; };
-		457536991BB0A32C00F6EAA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536971BB0A32C00F6EAA4 /* main.m */; settings = {ASSET_TAGS = (); }; };
-		457536A11BB0B2BA00F6EAA4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457536A01BB0B2BA00F6EAA4 /* Storyboard.storyboard */; settings = {ASSET_TAGS = (); }; };
-		457536A51BB1CFDF00F6EAA4 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536A41BB1CFDF00F6EAA4 /* TabBarViewController.m */; settings = {ASSET_TAGS = (); }; };
-		457536A91BB1DB0100F6EAA4 /* UIImage+Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536A81BB1DB0100F6EAA4 /* UIImage+Overlay.m */; settings = {ASSET_TAGS = (); }; };
-		457536B21BB1EC8E00F6EAA4 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536B11BB1EC8E00F6EAA4 /* Constants.m */; settings = {ASSET_TAGS = (); }; };
-		457536B51BB2045C00F6EAA4 /* AvailableLogosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536B41BB2045C00F6EAA4 /* AvailableLogosTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		457536B81BB20B1000F6EAA4 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536B71BB20B1000F6EAA4 /* FeedViewController.m */; settings = {ASSET_TAGS = (); }; };
-		457536BB1BB20B2A00F6EAA4 /* RewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536BA1BB20B2A00F6EAA4 /* RewardsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		450886141BB0A19D007E8E8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4508860E1BB0A19D007E8E8D /* AppDelegate.m */; };
+		450886151BB0A19D007E8E8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450886101BB0A19D007E8E8D /* Images.xcassets */; };
+		450886161BB0A19D007E8E8D /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450886121BB0A19D007E8E8D /* ScannerViewController.m */; };
+		455A7EC31BAFC199006B39E3 /* Moodstocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455A7EC21BAFC199006B39E3 /* Moodstocks.framework */; };
+		457536981BB0A32C00F6EAA4 /* Fuzz-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 457536951BB0A32C00F6EAA4 /* Fuzz-info.plist */; };
+		457536991BB0A32C00F6EAA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536971BB0A32C00F6EAA4 /* main.m */; };
+		457536A11BB0B2BA00F6EAA4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457536A01BB0B2BA00F6EAA4 /* Storyboard.storyboard */; };
+		457536A51BB1CFDF00F6EAA4 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536A41BB1CFDF00F6EAA4 /* TabBarViewController.m */; };
+		457536A91BB1DB0100F6EAA4 /* UIImage+Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536A81BB1DB0100F6EAA4 /* UIImage+Overlay.m */; };
+		457536B21BB1EC8E00F6EAA4 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536B11BB1EC8E00F6EAA4 /* Constants.m */; };
+		457536B51BB2045C00F6EAA4 /* AvailableLogosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536B41BB2045C00F6EAA4 /* AvailableLogosTableViewController.m */; };
+		457536B81BB20B1000F6EAA4 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536B71BB20B1000F6EAA4 /* FeedViewController.m */; };
+		457536BB1BB20B2A00F6EAA4 /* RewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 457536BA1BB20B2A00F6EAA4 /* RewardsViewController.m */; };
 		82CAC14D18BBA03D0082342E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14C18BBA03D0082342E /* Foundation.framework */; };
 		82CAC14F18BBA03D0082342E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14E18BBA03D0082342E /* CoreGraphics.framework */; };
 		82CAC15118BBA03D0082342E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC15018BBA03D0082342E /* UIKit.framework */; };
-		82CAC16718BBA03D0082342E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14C18BBA03D0082342E /* Foundation.framework */; };
-		82CAC16818BBA03D0082342E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC15018BBA03D0082342E /* UIKit.framework */; };
 		82CAC18018BBA1150082342E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC17F18BBA1150082342E /* QuartzCore.framework */; };
 		82CAC18218BBA1190082342E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC18118BBA1190082342E /* CoreVideo.framework */; };
 		82CAC18418BBA11E0082342E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC18318BBA11E0082342E /* CoreMedia.framework */; };
 		82CAC18618BBA1240082342E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC18518BBA1240082342E /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		82CAC16918BBA03D0082342E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 82CAC14118BBA03D0082342E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 82CAC14818BBA03D0082342E;
-			remoteInfo = HelloMS;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4508860D1BB0A19D007E8E8D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Fuzz/AppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -69,7 +57,6 @@
 		82CAC14C18BBA03D0082342E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82CAC14E18BBA03D0082342E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		82CAC15018BBA03D0082342E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		82CAC16418BBA03D0082342E /* Fuzz.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fuzz.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CAC17F18BBA1150082342E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		82CAC18118BBA1190082342E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		82CAC18318BBA11E0082342E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -89,15 +76,6 @@
 				82CAC14F18BBA03D0082342E /* CoreGraphics.framework in Frameworks */,
 				82CAC15118BBA03D0082342E /* UIKit.framework in Frameworks */,
 				82CAC14D18BBA03D0082342E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		82CAC16118BBA03D0082342E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				82CAC16818BBA03D0082342E /* UIKit.framework in Frameworks */,
-				82CAC16718BBA03D0082342E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				82CAC14918BBA03D0082342E /* Fuzz.app */,
-				82CAC16418BBA03D0082342E /* Fuzz.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,8 +167,7 @@
 				450886101BB0A19D007E8E8D /* Images.xcassets */,
 				82CAC15318BBA03D0082342E /* Supporting Files */,
 			);
-			name = Fuzz;
-			path = HelloMS;
+			path = Fuzz;
 			sourceTree = "<group>";
 		};
 		82CAC15318BBA03D0082342E /* Supporting Files */ = {
@@ -227,24 +203,6 @@
 			productReference = 82CAC14918BBA03D0082342E /* Fuzz.app */;
 			productType = "com.apple.product-type.application";
 		};
-		82CAC16318BBA03D0082342E /* FuzzTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 82CAC17818BBA03D0082342E /* Build configuration list for PBXNativeTarget "FuzzTests" */;
-			buildPhases = (
-				82CAC16018BBA03D0082342E /* Sources */,
-				82CAC16118BBA03D0082342E /* Frameworks */,
-				82CAC16218BBA03D0082342E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				82CAC16A18BBA03D0082342E /* PBXTargetDependency */,
-			);
-			name = FuzzTests;
-			productName = HelloMSTests;
-			productReference = 82CAC16418BBA03D0082342E /* Fuzz.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -256,9 +214,6 @@
 				TargetAttributes = {
 					82CAC14818BBA03D0082342E = {
 						DevelopmentTeam = 98E8SVTQ29;
-					};
-					82CAC16318BBA03D0082342E = {
-						TestTargetID = 82CAC14818BBA03D0082342E;
 					};
 				};
 			};
@@ -275,7 +230,6 @@
 			projectRoot = "";
 			targets = (
 				82CAC14818BBA03D0082342E /* Fuzz */,
-				82CAC16318BBA03D0082342E /* FuzzTests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,13 +242,6 @@
 				450886151BB0A19D007E8E8D /* Images.xcassets in Resources */,
 				457536A11BB0B2BA00F6EAA4 /* Storyboard.storyboard in Resources */,
 				457536981BB0A32C00F6EAA4 /* Fuzz-info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		82CAC16218BBA03D0082342E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,22 +264,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		82CAC16018BBA03D0082342E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		82CAC16A18BBA03D0082342E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 82CAC14818BBA03D0082342E /* Fuzz */;
-			targetProxy = 82CAC16918BBA03D0082342E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		82CAC17318BBA03D0082342E /* Debug */ = {
@@ -353,7 +285,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -368,8 +302,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -392,7 +327,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -400,7 +337,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -423,6 +361,7 @@
 				GCC_PREFIX_HEADER = "Fuzz/Fuzz-Prefix.pch";
 				INFOPLIST_FILE = "Fuzz/Fuzz-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skytopdesigns.Fuzz;
 				PRODUCT_NAME = Fuzz;
@@ -454,46 +393,6 @@
 			};
 			name = Release;
 		};
-		82CAC17918BBA03D0082342E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HelloMS.app/HelloMS";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloMS/HelloMS-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "HelloMSTests/HelloMSTests-Info.plist";
-				PRODUCT_NAME = Fuzz;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		82CAC17A18BBA03D0082342E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HelloMS.app/HelloMS";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloMS/HelloMS-Prefix.pch";
-				INFOPLIST_FILE = "HelloMSTests/HelloMSTests-Info.plist";
-				PRODUCT_NAME = Fuzz;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -511,15 +410,6 @@
 			buildConfigurations = (
 				82CAC17618BBA03D0082342E /* Debug */,
 				82CAC17718BBA03D0082342E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		82CAC17818BBA03D0082342E /* Build configuration list for PBXNativeTarget "FuzzTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				82CAC17918BBA03D0082342E /* Debug */,
-				82CAC17A18BBA03D0082342E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

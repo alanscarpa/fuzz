@@ -134,7 +134,25 @@
                     <view key="view" contentMode="scaleToFill" id="xCV-Mw-3WM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="ejg-2t-Feh">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.99215686270000003" green="0.3803921569" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                    <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Fuzz Feed" id="ssg-Fb-Iou"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ejg-2t-Feh" firstAttribute="top" secondItem="2UU-tI-CUU" secondAttribute="bottom" id="bAc-ZZ-yVb"/>
+                            <constraint firstItem="ejg-2t-Feh" firstAttribute="centerX" secondItem="xCV-Mw-3WM" secondAttribute="centerX" id="dlb-uJ-xZC"/>
+                            <constraint firstItem="ejg-2t-Feh" firstAttribute="width" secondItem="xCV-Mw-3WM" secondAttribute="width" id="o7x-Rr-oLF"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Fuzz Feed" id="Jis-jL-Czg"/>
                 </viewController>
