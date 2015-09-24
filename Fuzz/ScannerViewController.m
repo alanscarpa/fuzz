@@ -1,6 +1,4 @@
 #import "ScannerViewController.h"
-#import "Constants.h"
-#import "SVProgressHUD.h"
 #import "ScannerSingleton.h"
 
 static int kMSResultTypes = MSResultTypeImage  |
@@ -25,7 +23,6 @@ static int kMSResultTypes = MSResultTypeImage  |
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   // [SVProgressHUD show];
     _scannerSingleton = [ScannerSingleton init];
     [self setUpUI];
     [self initializeScanner];

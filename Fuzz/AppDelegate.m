@@ -26,6 +26,7 @@
 #import "ScannerViewController.h"
 #import "ScannerSingleton.h"
 #import "Constants.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate {
     ScannerSingleton *_scannerSingleton;
@@ -34,6 +35,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self initializeScanner];
+    [self initializeParse];
     return YES;
 }
 
@@ -58,6 +60,8 @@
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
+
+
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
@@ -95,4 +99,18 @@
     [_scannerSingleton.scannerSession startRunning];
 }
 
+
+-(void)initializeParse
+{
+    // Initialize Parse.
+    [Parse setApplicationId:@"wu9LPxjTgbejpFTsa9r0kNLSmyGCj0Jjv7mvyHTW"
+                  clientKey:@"g7livpr9I3BnV2brHQJ0oxiKDPzx3RERAr0IBpCz"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:nil];
+    
+    
+   
+   
+}
 @end

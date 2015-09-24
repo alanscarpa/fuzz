@@ -7,8 +7,10 @@
 //
 
 #import "FeedViewController.h"
+#import <Parse/Parse.h>
 
 @interface FeedViewController ()
+
 
 @end
 
@@ -17,6 +19,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSDictionary *dimensions = @{
+                                 // What type of news is this?
+                                 @"category": @"politics",
+                                 // Is it a weekday or the weekend?
+                                 @"dayType": @"weekday",
+                                 };
+    // Send the dimensions to Parse along with the 'read' event
+    
+    [PFAnalytics trackEventInBackground:@"write" dimensions:dimensions block:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded){
+            NSLog(@"succeeded");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
 }
 
 -(BOOL)prefersStatusBarHidden
