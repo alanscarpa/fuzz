@@ -1,7 +1,7 @@
 #import "ScannerViewController.h"
 #import "Constants.h"
 #import "SVProgressHUD.h"
-#import "Singletons.h"
+#import "ScannerSingleton.h"
 
 static int kMSResultTypes = MSResultTypeImage  |
                             MSResultTypeQRCode |
@@ -18,7 +18,7 @@ static int kMSResultTypes = MSResultTypeImage  |
 
 
 @implementation ScannerViewController {
-    Singletons *_scannerSessionSingleton;
+    ScannerSingleton *_scannerSingleton;
 }
 
 
@@ -26,7 +26,7 @@ static int kMSResultTypes = MSResultTypeImage  |
 {
     [super viewDidLoad];
    // [SVProgressHUD show];
-    _scannerSessionSingleton = [Singletons captureSessionSingleton];
+    _scannerSingleton = [ScannerSingleton init];
     [self setUpUI];
     [self initializeScanner];
 
@@ -65,13 +65,13 @@ static int kMSResultTypes = MSResultTypeImage  |
 -(void)initializeScanner
 {
 
-    _scannerSessionSingleton.scannerSession.delegate = self;
-    _scannerSessionSingleton.scannerSession.resultTypes = kMSResultTypes;
+    _scannerSingleton.scannerSession.delegate = self;
+    _scannerSingleton.scannerSession.resultTypes = kMSResultTypes;
 
     CALayer *videoPreviewLayer = [self.videoPreview layer];
     [videoPreviewLayer setMasksToBounds:YES];
     
-    CALayer *captureLayer = [_scannerSessionSingleton.scannerSession captureLayer];
+    CALayer *captureLayer = [_scannerSingleton.scannerSession captureLayer];
     [captureLayer setFrame:[self.videoPreview bounds]];
     
     [videoPreviewLayer insertSublayer:captureLayer
@@ -91,7 +91,7 @@ static int kMSResultTypes = MSResultTypeImage  |
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:type message:message preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [_scannerSessionSingleton.scannerSession resumeProcessing];
+        [_scannerSingleton.scannerSession resumeProcessing];
     }];
     
     [alert addAction:ok];
@@ -111,7 +111,7 @@ static int kMSResultTypes = MSResultTypeImage  |
 
 - (void)dealloc
 {
-    [_scannerSessionSingleton.scannerSession stopRunning];
+    [_scannerSingleton.scannerSession stopRunning];
 }
 
 

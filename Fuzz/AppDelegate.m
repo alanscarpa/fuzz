@@ -24,11 +24,11 @@
 #import "AppDelegate.h"
 #import <Moodstocks/Moodstocks.h>
 #import "ScannerViewController.h"
-#import "Singletons.h"
+#import "ScannerSingleton.h"
 #import "Constants.h"
 
 @implementation AppDelegate {
-    Singletons *_scannerSessionSingleton;
+    ScannerSingleton *_scannerSingleton;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -61,27 +61,27 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    [_scannerSessionSingleton.scanner close:nil];
+    [_scannerSingleton.scanner close:nil];
 }
 
 
 
 -(void)initializeScanner
 {
-    _scannerSessionSingleton = [Singletons captureSessionSingleton];
+    _scannerSingleton = [ScannerSingleton init];
     
     NSString *path = [MSScanner cachesPathFor:@"scanner.db"];
-    _scannerSessionSingleton.scanner = [[MSScanner alloc] init];
-    _scannerSessionSingleton.scannerSession = [[MSAutoScannerSession alloc] initWithScanner:_scannerSessionSingleton.scanner];
+    _scannerSingleton.scanner = [[MSScanner alloc] init];
+    _scannerSingleton.scannerSession = [[MSAutoScannerSession alloc] initWithScanner:_scannerSingleton.scanner];
     
-    [_scannerSessionSingleton.scanner openWithPath:path key:MS_API_KEY secret:MS_API_SECRET error:nil];
+    [_scannerSingleton.scanner openWithPath:path key:MS_API_KEY secret:MS_API_SECRET error:nil];
     
     // Create the progression and completion blocks:
     void (^completionBlock)(MSSync *, NSError *) = ^(MSSync *op, NSError *error) {
         if (error)
             NSLog(@"Sync failed with error: %@", [error ms_message]);
         else
-            NSLog(@"Sync succeeded (%li images(s))", (long)[_scannerSessionSingleton.scanner count:nil]);
+            NSLog(@"Sync succeeded (%li images(s))", (long)[_scannerSingleton.scanner count:nil]);
     };
     
     void (^progressionBlock)(NSInteger) = ^(NSInteger percent) {
@@ -90,9 +90,9 @@
     };
     
     // Launch the synchronization
-    [_scannerSessionSingleton.scanner syncInBackgroundWithBlock:completionBlock progressBlock:progressionBlock];
+    [_scannerSingleton.scanner syncInBackgroundWithBlock:completionBlock progressBlock:progressionBlock];
     
-    [_scannerSessionSingleton.scannerSession startRunning];
+    [_scannerSingleton.scannerSession startRunning];
 }
 
 @end

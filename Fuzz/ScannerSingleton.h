@@ -9,11 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <Moodstocks/Moodstocks.h>
 
-@interface Singletons : NSObject
+@interface ScannerSingleton : NSObject
 
 @property (strong, nonatomic) MSAutoScannerSession *scannerSession;
 @property MSScanner *scanner;
-
-+(instancetype)captureSessionSingleton;
 
 @end
