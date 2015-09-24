@@ -1,6 +1,7 @@
 #import "ScannerViewController.h"
 #import "Constants.h"
 #import "SVProgressHUD.h"
+#import "Singletons.h"
 
 static int kMSResultTypes = MSResultTypeImage  |
                             MSResultTypeQRCode |
@@ -17,15 +18,15 @@ static int kMSResultTypes = MSResultTypeImage  |
 
 
 @implementation ScannerViewController {
-    MSAutoScannerSession *_scannerSession;
+    Singletons *_scannerSessionSingleton;
 }
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [SVProgressHUD show];
-    
+   // [SVProgressHUD show];
+    _scannerSessionSingleton = [Singletons captureSessionSingleton];
     [self setUpUI];
     [self initializeScanner];
 
@@ -63,43 +64,18 @@ static int kMSResultTypes = MSResultTypeImage  |
 
 -(void)initializeScanner
 {
-    NSString *path = [MSScanner cachesPathFor:@"scanner.db"];
-    _scanner = [[MSScanner alloc] init];
-    [_scanner openWithPath:path key:MS_API_KEY secret:MS_API_SECRET error:nil];
-    
-    // Create the progression and completion blocks:
-    void (^completionBlock)(MSSync *, NSError *) = ^(MSSync *op, NSError *error) {
-        if (error)
-            NSLog(@"Sync failed with error: %@", [error ms_message]);
-        else
-            NSLog(@"Sync succeeded (%li images(s))", (long)[_scanner count:nil]);
-            [SVProgressHUD dismiss];
-        
-    };
-    
-    void (^progressionBlock)(NSInteger) = ^(NSInteger percent) {
-        NSLog(@"Sync progressing: %li%%", (long)percent);
-        
-    };
-    
-    // Launch the synchronization
-    [_scanner syncInBackgroundWithBlock:completionBlock progressBlock:progressionBlock];
-    self.scanner = _scanner;
-    
-    _scannerSession = [[MSAutoScannerSession alloc] initWithScanner:_scanner];
-    _scannerSession.delegate = self;
-    _scannerSession.resultTypes = kMSResultTypes;
-    
+
+    _scannerSessionSingleton.scannerSession.delegate = self;
+    _scannerSessionSingleton.scannerSession.resultTypes = kMSResultTypes;
+
     CALayer *videoPreviewLayer = [self.videoPreview layer];
     [videoPreviewLayer setMasksToBounds:YES];
     
-    CALayer *captureLayer = [_scannerSession captureLayer];
+    CALayer *captureLayer = [_scannerSessionSingleton.scannerSession captureLayer];
     [captureLayer setFrame:[self.videoPreview bounds]];
     
     [videoPreviewLayer insertSublayer:captureLayer
                                 below:[[videoPreviewLayer sublayers] objectAtIndex:0]];
-    
-    [_scannerSession startRunning];
 
 }
 
@@ -115,7 +91,7 @@ static int kMSResultTypes = MSResultTypeImage  |
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:type message:message preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [_scannerSession resumeProcessing];
+        [_scannerSessionSingleton.scannerSession resumeProcessing];
     }];
     
     [alert addAction:ok];
@@ -135,7 +111,7 @@ static int kMSResultTypes = MSResultTypeImage  |
 
 - (void)dealloc
 {
-    [_scannerSession stopRunning];
+    [_scannerSessionSingleton.scannerSession stopRunning];
 }
 
 

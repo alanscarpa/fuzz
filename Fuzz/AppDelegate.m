@@ -24,14 +24,16 @@
 #import "AppDelegate.h"
 #import <Moodstocks/Moodstocks.h>
 #import "ScannerViewController.h"
+#import "Singletons.h"
+#import "Constants.h"
 
 @implementation AppDelegate {
-    MSScanner *_scanner;
+    Singletons *_scannerSessionSingleton;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
+    [self initializeScanner];
     return YES;
 }
 
@@ -59,7 +61,38 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    [_scanner close:nil];
+    [_scannerSessionSingleton.scanner close:nil];
+}
+
+
+
+-(void)initializeScanner
+{
+    _scannerSessionSingleton = [Singletons captureSessionSingleton];
+    
+    NSString *path = [MSScanner cachesPathFor:@"scanner.db"];
+    _scannerSessionSingleton.scanner = [[MSScanner alloc] init];
+    _scannerSessionSingleton.scannerSession = [[MSAutoScannerSession alloc] initWithScanner:_scannerSessionSingleton.scanner];
+    
+    [_scannerSessionSingleton.scanner openWithPath:path key:MS_API_KEY secret:MS_API_SECRET error:nil];
+    
+    // Create the progression and completion blocks:
+    void (^completionBlock)(MSSync *, NSError *) = ^(MSSync *op, NSError *error) {
+        if (error)
+            NSLog(@"Sync failed with error: %@", [error ms_message]);
+        else
+            NSLog(@"Sync succeeded (%li images(s))", (long)[_scannerSessionSingleton.scanner count:nil]);
+    };
+    
+    void (^progressionBlock)(NSInteger) = ^(NSInteger percent) {
+        NSLog(@"Sync progressing: %li%%", (long)percent);
+        
+    };
+    
+    // Launch the synchronization
+    [_scannerSessionSingleton.scanner syncInBackgroundWithBlock:completionBlock progressBlock:progressionBlock];
+    
+    [_scannerSessionSingleton.scannerSession startRunning];
 }
 
 @end

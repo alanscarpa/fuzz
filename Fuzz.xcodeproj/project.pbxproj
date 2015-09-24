@@ -24,6 +24,7 @@
 		45AED1E91BB46EC900324092 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45AED1E31BB46EC900324092 /* SVProgressHUD.bundle */; settings = {ASSET_TAGS = (); }; };
 		45AED1EA1BB46EC900324092 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED1E51BB46EC900324092 /* SVProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		45AED1EB1BB46EC900324092 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED1E71BB46EC900324092 /* SVRadialGradientLayer.m */; settings = {ASSET_TAGS = (); }; };
+		45AED1EF1BB478B200324092 /* Singletons.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED1EE1BB478B200324092 /* Singletons.m */; settings = {ASSET_TAGS = (); }; };
 		82CAC14D18BBA03D0082342E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14C18BBA03D0082342E /* Foundation.framework */; };
 		82CAC14F18BBA03D0082342E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14E18BBA03D0082342E /* CoreGraphics.framework */; };
 		82CAC15118BBA03D0082342E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC15018BBA03D0082342E /* UIKit.framework */; };
@@ -64,6 +65,8 @@
 		45AED1E51BB46EC900324092 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		45AED1E61BB46EC900324092 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		45AED1E71BB46EC900324092 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		45AED1ED1BB478B200324092 /* Singletons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singletons.h; sourceTree = "<group>"; };
+		45AED1EE1BB478B200324092 /* Singletons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singletons.m; sourceTree = "<group>"; };
 		82CAC14918BBA03D0082342E /* Fuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CAC14C18BBA03D0082342E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82CAC14E18BBA03D0082342E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,6 +154,15 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		45AED1EC1BB4787800324092 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				45AED1ED1BB478B200324092 /* Singletons.h */,
+				45AED1EE1BB478B200324092 /* Singletons.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		82CAC14018BBA03D0082342E = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +203,7 @@
 				457536AA1BB1E95300F6EAA4 /* Controllers */,
 				457536A61BB1DADE00F6EAA4 /* Categories */,
 				450886101BB0A19D007E8E8D /* Images.xcassets */,
+				45AED1EC1BB4787800324092 /* Utilities */,
 				82CAC15318BBA03D0082342E /* Supporting Files */,
 			);
 			path = Fuzz;
@@ -281,6 +294,7 @@
 			files = (
 				457536A51BB1CFDF00F6EAA4 /* TabBarViewController.m in Sources */,
 				450886141BB0A19D007E8E8D /* AppDelegate.m in Sources */,
+				45AED1EF1BB478B200324092 /* Singletons.m in Sources */,
 				457536B81BB20B1000F6EAA4 /* FeedViewController.m in Sources */,
 				457536991BB0A32C00F6EAA4 /* main.m in Sources */,
 				450886161BB0A19D007E8E8D /* ScannerViewController.m in Sources */,
