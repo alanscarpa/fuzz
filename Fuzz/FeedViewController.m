@@ -8,6 +8,8 @@
 
 #import "FeedViewController.h"
 #import <Parse/Parse.h>
+#import "Business.h"
+#import "BusinessProfile.h"
 
 @interface FeedViewController ()
 
@@ -18,22 +20,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    NSDictionary *dimensions = @{
-                                 // What type of news is this?
-                                 @"category": @"politics",
-                                 // Is it a weekday or the weekend?
-                                 @"dayType": @"weekday",
-                                 };
-    // Send the dimensions to Parse along with the 'read' event
     
-    [PFAnalytics trackEventInBackground:@"write" dimensions:dimensions block:^(BOOL succeeded, NSError * _Nullable error) {
+    Business *biz = [Business object];
+    biz.averageRevenuePerCustomer = 4;
+    
+    BusinessProfile *bizProfile = [BusinessProfile object];
+    bizProfile.name = @"Rook";
+    
+    biz.businessProfile = bizProfile;
+    
+    [biz saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded){
-            NSLog(@"succeeded");
+            NSLog(@"Saved custom thing!!");
         } else {
-            NSLog(@"%@", error);
+            NSLog(@"Errrrrror: %@", error);
         }
     }];
+    
 }
 
 -(BOOL)prefersStatusBarHidden

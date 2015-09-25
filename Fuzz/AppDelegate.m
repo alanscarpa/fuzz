@@ -28,6 +28,7 @@
 #import "Constants.h"
 #import <Parse/Parse.h>
 
+
 @implementation AppDelegate {
     ScannerSingleton *_scannerSingleton;
 }
@@ -102,15 +103,14 @@
 
 -(void)initializeParse
 {
+
     // Initialize Parse.
     [Parse setApplicationId:@"wu9LPxjTgbejpFTsa9r0kNLSmyGCj0Jjv7mvyHTW"
                   clientKey:@"g7livpr9I3BnV2brHQJ0oxiKDPzx3RERAr0IBpCz"];
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:nil];
-    
-    
-   
+
    
 }
 @end

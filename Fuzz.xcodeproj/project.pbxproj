@@ -51,6 +51,11 @@
 		45AED23F1BB48AEF00324092 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45AED23E1BB48AEF00324092 /* AdSupport.framework */; };
 		45AED2401BB48B3900324092 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 45AED21F1BB4865200324092 /* libstdc++.6.tbd */; };
 		45AED2411BB48B6600324092 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 45AED2121BB4855E00324092 /* libsqlite3.tbd */; };
+		45AED2451BB5982D00324092 /* Business.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED2441BB5982D00324092 /* Business.m */; settings = {ASSET_TAGS = (); }; };
+		45AED2481BB5984800324092 /* Reward.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED2471BB5984800324092 /* Reward.m */; settings = {ASSET_TAGS = (); }; };
+		45AED24B1BB5984E00324092 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED24A1BB5984E00324092 /* User.m */; settings = {ASSET_TAGS = (); }; };
+		45AED24E1BB5985E00324092 /* BusinessProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED24D1BB5985E00324092 /* BusinessProfile.m */; settings = {ASSET_TAGS = (); }; };
+		45AED2511BB5986600324092 /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED2501BB5986600324092 /* UserProfile.m */; settings = {ASSET_TAGS = (); }; };
 		82CAC14D18BBA03D0082342E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14C18BBA03D0082342E /* Foundation.framework */; };
 		82CAC14F18BBA03D0082342E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14E18BBA03D0082342E /* CoreGraphics.framework */; };
 		82CAC15118BBA03D0082342E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC15018BBA03D0082342E /* UIKit.framework */; };
@@ -119,6 +124,16 @@
 		45AED2331BB489E100324092 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		45AED23C1BB48AEA00324092 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		45AED23E1BB48AEF00324092 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		45AED2431BB5982D00324092 /* Business.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Business.h; sourceTree = "<group>"; };
+		45AED2441BB5982D00324092 /* Business.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Business.m; sourceTree = "<group>"; };
+		45AED2461BB5984800324092 /* Reward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reward.h; sourceTree = "<group>"; };
+		45AED2471BB5984800324092 /* Reward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reward.m; sourceTree = "<group>"; };
+		45AED2491BB5984E00324092 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		45AED24A1BB5984E00324092 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		45AED24C1BB5985E00324092 /* BusinessProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessProfile.h; sourceTree = "<group>"; };
+		45AED24D1BB5985E00324092 /* BusinessProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessProfile.m; sourceTree = "<group>"; };
+		45AED24F1BB5986600324092 /* UserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfile.h; sourceTree = "<group>"; };
+		45AED2501BB5986600324092 /* UserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfile.m; sourceTree = "<group>"; };
 		82CAC14918BBA03D0082342E /* Fuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CAC14C18BBA03D0082342E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82CAC14E18BBA03D0082342E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -266,6 +281,23 @@
 			path = FacebookSDK;
 			sourceTree = "<group>";
 		};
+		45AED2421BB5980500324092 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45AED2431BB5982D00324092 /* Business.h */,
+				45AED2441BB5982D00324092 /* Business.m */,
+				45AED24C1BB5985E00324092 /* BusinessProfile.h */,
+				45AED24D1BB5985E00324092 /* BusinessProfile.m */,
+				45AED2461BB5984800324092 /* Reward.h */,
+				45AED2471BB5984800324092 /* Reward.m */,
+				45AED2491BB5984E00324092 /* User.h */,
+				45AED24A1BB5984E00324092 /* User.m */,
+				45AED24F1BB5986600324092 /* UserProfile.h */,
+				45AED2501BB5986600324092 /* UserProfile.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		82CAC14018BBA03D0082342E = {
 			isa = PBXGroup;
 			children = (
@@ -316,11 +348,12 @@
 		82CAC15218BBA03D0082342E /* Fuzz */ = {
 			isa = PBXGroup;
 			children = (
+				45AED2421BB5980500324092 /* Model */,
 				457536AB1BB1E95C00F6EAA4 /* Views */,
 				457536AA1BB1E95300F6EAA4 /* Controllers */,
 				457536A61BB1DADE00F6EAA4 /* Categories */,
-				450886101BB0A19D007E8E8D /* Images.xcassets */,
 				45AED1EC1BB4787800324092 /* Utilities */,
+				450886101BB0A19D007E8E8D /* Images.xcassets */,
 				82CAC15318BBA03D0082342E /* Supporting Files */,
 			);
 			path = Fuzz;
@@ -412,15 +445,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45AED24B1BB5984E00324092 /* User.m in Sources */,
 				457536A51BB1CFDF00F6EAA4 /* TabBarViewController.m in Sources */,
+				45AED2511BB5986600324092 /* UserProfile.m in Sources */,
 				450886141BB0A19D007E8E8D /* AppDelegate.m in Sources */,
 				45AED1EF1BB478B200324092 /* ScannerSingleton.m in Sources */,
+				45AED2451BB5982D00324092 /* Business.m in Sources */,
 				457536B81BB20B1000F6EAA4 /* FeedViewController.m in Sources */,
+				45AED24E1BB5985E00324092 /* BusinessProfile.m in Sources */,
 				457536991BB0A32C00F6EAA4 /* main.m in Sources */,
 				450886161BB0A19D007E8E8D /* ScannerViewController.m in Sources */,
 				45AED1E81BB46EC900324092 /* SVIndefiniteAnimatedView.m in Sources */,
 				457536A91BB1DB0100F6EAA4 /* UIImage+Overlay.m in Sources */,
 				45AED1EB1BB46EC900324092 /* SVRadialGradientLayer.m in Sources */,
+				45AED2481BB5984800324092 /* Reward.m in Sources */,
 				457536B21BB1EC8E00F6EAA4 /* Constants.m in Sources */,
 				457536B51BB2045C00F6EAA4 /* AvailableLogosTableViewController.m in Sources */,
 				45AED1EA1BB46EC900324092 /* SVProgressHUD.m in Sources */,
