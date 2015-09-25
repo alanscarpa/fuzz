@@ -12,6 +12,7 @@
 
 @implementation Reward
 
+@dynamic title, description, redemptionInstructions, startDate, endDate, amountAvailable,scansAllowedPerDay, image, winTime, isInstantWin, isPunch;
 
 +(void)load
 {

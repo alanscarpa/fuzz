@@ -1,17 +1,16 @@
 //
-//  User.m
+//  AwardedReward.m
 //  Fuzz
 //
 //  Created by Alan Scarpa on 9/25/15.
 //
 //
 
-#import "User.h"
-#import <Parse/PFObject+Subclass.h>
+#import "AwardedReward.h"
 
-@implementation User
+@implementation AwardedReward
 
-@dynamic userProfile, scans, rewards;
+@dynamic reward, wasRedeemed;
 
 +(void)load
 {
@@ -21,7 +20,7 @@
 
 +(NSString*)parseClassName
 {
-    return @"User";
+    return @"AwardedReward";
 }
 
 

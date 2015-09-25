@@ -17,6 +17,6 @@
 @property (nonatomic, strong) NSNumber *SKU;
 @property (nonatomic, strong) NSMutableArray *users;
 @property (nonatomic) NSInteger averageRevenuePerCustomer;
-
+@property (nonatomic) NSInteger numberOfScansReceived;
 
 @end

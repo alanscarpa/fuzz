@@ -11,6 +11,7 @@
 
 @implementation UserProfile
 
+@dynamic firstName, lastName, email, profilePhoto, city, state, age, canSellEmail, likes;
 
 +(void)load
 {

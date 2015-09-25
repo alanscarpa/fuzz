@@ -16,7 +16,7 @@
 @dynamic SKU;
 @dynamic users;
 @dynamic averageRevenuePerCustomer;
-
+@dynamic numberOfScansReceived;
 
 + (void)load {
     [self registerSubclass];

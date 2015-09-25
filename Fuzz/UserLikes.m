@@ -1,17 +1,18 @@
 //
-//  User.m
+//  UserLikes.m
 //  Fuzz
 //
 //  Created by Alan Scarpa on 9/25/15.
 //
 //
 
-#import "User.h"
-#import <Parse/PFObject+Subclass.h>
+#import "UserLikes.h"
 
-@implementation User
+@implementation UserLikes
 
-@dynamic userProfile, scans, rewards;
+
+@dynamic tvShows, movies, music, brands;
+
 
 +(void)load
 {
@@ -21,7 +22,7 @@
 
 +(NSString*)parseClassName
 {
-    return @"User";
+    return @"UserLikes";
 }
 
 

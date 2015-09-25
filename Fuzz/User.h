@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "UserProfile.h"
 
 @interface User : PFObject <PFSubclassing>
+
+@property (nonatomic, strong) UserProfile *userProfile;
+
+// scanned scan class has user pointer
+// Full of Scan class
+@property (nonatomic, strong) NSMutableArray *scans;
+
+// Full of Awarded Rewards
+@property (nonatomic, strong) NSMutableArray *rewards;
+
 @end
