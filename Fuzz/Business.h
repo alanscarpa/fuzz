@@ -15,7 +15,7 @@
 @property (nonatomic, strong) BusinessProfile *businessProfile;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSMutableArray *rewards;
-@property (nonatomic, strong) NSNumber *SKU;
+@property (nonatomic, strong) NSString *SKU;
 @property (nonatomic, strong) NSMutableArray *users;
 @property (nonatomic) NSInteger averageRevenuePerCustomer;
 @property (nonatomic) NSInteger numberOfScansReceived;
