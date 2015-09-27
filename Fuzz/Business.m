@@ -12,6 +12,7 @@
 @implementation Business
 
 @dynamic businessProfile;
+@dynamic name;
 @dynamic rewards;
 @dynamic SKU;
 @dynamic users;

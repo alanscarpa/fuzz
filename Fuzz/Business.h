@@ -13,6 +13,7 @@
 @interface Business : PFObject <PFSubclassing>
 
 @property (nonatomic, strong) BusinessProfile *businessProfile;
+@property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSMutableArray *rewards;
 @property (nonatomic, strong) NSNumber *SKU;
 @property (nonatomic, strong) NSMutableArray *users;

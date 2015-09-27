@@ -22,6 +22,7 @@
 @property (nonatomic, strong) NSDate *winTime;
 @property (nonatomic) BOOL isInstantWin;
 @property (nonatomic) BOOL isPunch;
+@property (nonatomic) BOOL ableToWinToday;
 
 
 @end
