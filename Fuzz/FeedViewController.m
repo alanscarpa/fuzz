@@ -11,6 +11,9 @@
 #import "Business.h"
 #import "BusinessProfile.h"
 #import "Reward.h"
+#import "User.h"
+#import "UserProfile.h"
+#import "AwardedReward.h"
 
 @interface FeedViewController ()
 
@@ -43,12 +46,25 @@
     
     
     // put reward in user rewards array
-    [self getReward];
-
+    //[self registerBusiness];
+    //[self getReward];
+    [self registerUser];
     
     
 }
 
+-(void)registerUser
+{
+//    User *newUser = [User object];
+//    UserProfile *newUserProfile = [UserProfile object];
+//    newUserProfile.firstName = @"Bob";
+//    newUser.userProfile = newUserProfile;
+//    newUser.rewards = [@[]
+//    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+//        //
+//    }];
+    
+}
 
 -(void)registerBusiness
 {
@@ -101,25 +117,39 @@
                 if ([reward[@"ableToWinToday"] isEqual:@YES]){
                     [validRewards addObject:reward];
                 }
-                
             }
             
             // pick a random reward between 0 and count
             // implement later
             if (validRewards.count > 0){
                 if ([[NSDate date] timeIntervalSince1970] > [validRewards[0][@"winTime"] timeIntervalSince1970]) {
-                    // yourDate is in the past
-                    NSLog(@"Congratulations!  You've won! \n%@\n%@",objects[0][@"rewards"][0][@"title"],objects[0][@"rewards"][0][@"description"]);
+                    
+                    NSLog(@"Congratulations!  You've won! \n%@\n%@",objects[0][@"rewards"][0][@"title"], objects[0][@"rewards"][0][@"description"]);
                     validRewards[0][@"ableToWinToday"] = @NO;
-                    [validRewards[0] save];
+                    
+                    
+                    // set random time for reward
+                    // write a script that sets ableToWinToday to @YES every morning at 12am
+                    
+                    [validRewards[0] saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                        //
+                        
+                        FuzzUser *newUser = [FuzzUser object];
+                        UserProfile *newUserProfile = [UserProfile object];
+                        newUserProfile.firstName = @"Bob";
+                        newUser.userProfile = newUserProfile;
+                        
+                        AwardedReward *awardedReward = [AwardedReward object];
+                        awardedReward.reward = validRewards[0];
+                        newUser.rewards = [@[awardedReward] mutableCopy];
+                        [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+                            //
+                        }];
+                    }];
                 }
             }
-            
         }
-//        NSLog(@"%@", objects[0][@"rewards"][0][@"title"]);
-//        NSLog(@"%@", objects[0][@"rewards"][0][@"description"]);
     }];
-    
 }
 
 -(BOOL)prefersStatusBarHidden

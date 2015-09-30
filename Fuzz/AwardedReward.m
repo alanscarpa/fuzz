@@ -10,7 +10,7 @@
 
 @implementation AwardedReward
 
-@dynamic reward, wasRedeemed;
+@dynamic user, reward, wasRedeemed;
 
 +(void)load
 {

@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import "UserProfile.h"
 
-@interface User : PFObject <PFSubclassing>
+@interface FuzzUser : PFUser <PFSubclassing>
 
 @property (nonatomic, strong) UserProfile *userProfile;
 

@@ -9,13 +9,13 @@
 #import "User.h"
 #import <Parse/PFObject+Subclass.h>
 
-@implementation User
+@implementation FuzzUser
 
 @dynamic userProfile, scans, rewards;
 
-+(void)load
++ (void)load
 {
-    [self registerSubclass];
+    [PFUser registerSubclass];
 }
 
 

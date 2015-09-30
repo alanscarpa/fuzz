@@ -13,7 +13,7 @@
 
 @interface AwardedReward : PFObject <PFSubclassing>
 
-@property (nonatomic, strong) User *user;
+@property (nonatomic, strong) FuzzUser *user;
 @property (nonatomic, strong) Reward *reward;
 @property (nonatomic) BOOL wasRedeemed;
 
