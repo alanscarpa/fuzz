@@ -6,9 +6,9 @@
 //
 //
 
-#import "UserLikes.h"
+#import "FuzzUserLikes.h"
 
-@implementation UserLikes
+@implementation FuzzUserLikes
 
 
 @dynamic tvShows, movies, music, brands;
@@ -22,7 +22,7 @@
 
 +(NSString*)parseClassName
 {
-    return @"UserLikes";
+    return @"FuzzUserLikes";
 }
 
 

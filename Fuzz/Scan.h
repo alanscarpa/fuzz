@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 #import "Business.h"
-#import "User.h"
+#import "FuzzUser.h"
 
 @interface Scan : PFObject <PFSubclassing>
 

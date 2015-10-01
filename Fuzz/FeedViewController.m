@@ -11,7 +11,7 @@
 #import "Business.h"
 #import "BusinessProfile.h"
 #import "Reward.h"
-#import "User.h"
+#import "FuzzUser.h"
 #import "UserProfile.h"
 #import "AwardedReward.h"
 

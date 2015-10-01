@@ -53,12 +53,13 @@
 		45AED2411BB48B6600324092 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 45AED2121BB4855E00324092 /* libsqlite3.tbd */; };
 		45AED2451BB5982D00324092 /* Business.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED2441BB5982D00324092 /* Business.m */; settings = {ASSET_TAGS = (); }; };
 		45AED2481BB5984800324092 /* Reward.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED2471BB5984800324092 /* Reward.m */; settings = {ASSET_TAGS = (); }; };
-		45AED24B1BB5984E00324092 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED24A1BB5984E00324092 /* User.m */; settings = {ASSET_TAGS = (); }; };
+		45AED24B1BB5984E00324092 /* FuzzUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED24A1BB5984E00324092 /* FuzzUser.m */; settings = {ASSET_TAGS = (); }; };
 		45AED24E1BB5985E00324092 /* BusinessProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED24D1BB5985E00324092 /* BusinessProfile.m */; settings = {ASSET_TAGS = (); }; };
 		45AED2511BB5986600324092 /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED2501BB5986600324092 /* UserProfile.m */; settings = {ASSET_TAGS = (); }; };
 		45AED2541BB5A8D100324092 /* AwardedReward.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED2531BB5A8D100324092 /* AwardedReward.m */; settings = {ASSET_TAGS = (); }; };
 		45AED25A1BB5B9E800324092 /* Scan.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED2591BB5B9E800324092 /* Scan.m */; settings = {ASSET_TAGS = (); }; };
-		45AED25D1BB5E9B000324092 /* UserLikes.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED25C1BB5E9B000324092 /* UserLikes.m */; settings = {ASSET_TAGS = (); }; };
+		45AED25D1BB5E9B000324092 /* FuzzUserLikes.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED25C1BB5E9B000324092 /* FuzzUserLikes.m */; settings = {ASSET_TAGS = (); }; };
+		45E0663B1BBD4DDE00BB9723 /* ParseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E0663A1BBD4DDE00BB9723 /* ParseHandler.m */; settings = {ASSET_TAGS = (); }; };
 		82CAC14D18BBA03D0082342E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14C18BBA03D0082342E /* Foundation.framework */; };
 		82CAC14F18BBA03D0082342E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC14E18BBA03D0082342E /* CoreGraphics.framework */; };
 		82CAC15118BBA03D0082342E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CAC15018BBA03D0082342E /* UIKit.framework */; };
@@ -131,8 +132,8 @@
 		45AED2441BB5982D00324092 /* Business.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Business.m; sourceTree = "<group>"; };
 		45AED2461BB5984800324092 /* Reward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reward.h; sourceTree = "<group>"; };
 		45AED2471BB5984800324092 /* Reward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reward.m; sourceTree = "<group>"; };
-		45AED2491BB5984E00324092 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		45AED24A1BB5984E00324092 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		45AED2491BB5984E00324092 /* FuzzUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuzzUser.h; sourceTree = "<group>"; };
+		45AED24A1BB5984E00324092 /* FuzzUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuzzUser.m; sourceTree = "<group>"; };
 		45AED24C1BB5985E00324092 /* BusinessProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessProfile.h; sourceTree = "<group>"; };
 		45AED24D1BB5985E00324092 /* BusinessProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessProfile.m; sourceTree = "<group>"; };
 		45AED24F1BB5986600324092 /* UserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfile.h; sourceTree = "<group>"; };
@@ -141,8 +142,10 @@
 		45AED2531BB5A8D100324092 /* AwardedReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwardedReward.m; sourceTree = "<group>"; };
 		45AED2581BB5B9E800324092 /* Scan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scan.h; sourceTree = "<group>"; };
 		45AED2591BB5B9E800324092 /* Scan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scan.m; sourceTree = "<group>"; };
-		45AED25B1BB5E9B000324092 /* UserLikes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLikes.h; sourceTree = "<group>"; };
-		45AED25C1BB5E9B000324092 /* UserLikes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLikes.m; sourceTree = "<group>"; };
+		45AED25B1BB5E9B000324092 /* FuzzUserLikes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuzzUserLikes.h; sourceTree = "<group>"; };
+		45AED25C1BB5E9B000324092 /* FuzzUserLikes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuzzUserLikes.m; sourceTree = "<group>"; };
+		45E066391BBD4DDE00BB9723 /* ParseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseHandler.h; sourceTree = "<group>"; };
+		45E0663A1BBD4DDE00BB9723 /* ParseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseHandler.m; sourceTree = "<group>"; };
 		82CAC14918BBA03D0082342E /* Fuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CAC14C18BBA03D0082342E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82CAC14E18BBA03D0082342E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -258,6 +261,8 @@
 			children = (
 				45AED1ED1BB478B200324092 /* ScannerSingleton.h */,
 				45AED1EE1BB478B200324092 /* ScannerSingleton.m */,
+				45E066391BBD4DDE00BB9723 /* ParseHandler.h */,
+				45E0663A1BBD4DDE00BB9723 /* ParseHandler.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -303,10 +308,10 @@
 				45AED2531BB5A8D100324092 /* AwardedReward.m */,
 				45AED2581BB5B9E800324092 /* Scan.h */,
 				45AED2591BB5B9E800324092 /* Scan.m */,
-				45AED2491BB5984E00324092 /* User.h */,
-				45AED24A1BB5984E00324092 /* User.m */,
-				45AED25B1BB5E9B000324092 /* UserLikes.h */,
-				45AED25C1BB5E9B000324092 /* UserLikes.m */,
+				45AED2491BB5984E00324092 /* FuzzUser.h */,
+				45AED24A1BB5984E00324092 /* FuzzUser.m */,
+				45AED25B1BB5E9B000324092 /* FuzzUserLikes.h */,
+				45AED25C1BB5E9B000324092 /* FuzzUserLikes.m */,
 				45AED24F1BB5986600324092 /* UserProfile.h */,
 				45AED2501BB5986600324092 /* UserProfile.m */,
 			);
@@ -460,14 +465,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45AED24B1BB5984E00324092 /* User.m in Sources */,
+				45AED24B1BB5984E00324092 /* FuzzUser.m in Sources */,
 				457536A51BB1CFDF00F6EAA4 /* TabBarViewController.m in Sources */,
 				45AED2511BB5986600324092 /* UserProfile.m in Sources */,
 				450886141BB0A19D007E8E8D /* AppDelegate.m in Sources */,
 				45AED1EF1BB478B200324092 /* ScannerSingleton.m in Sources */,
-				45AED25D1BB5E9B000324092 /* UserLikes.m in Sources */,
+				45AED25D1BB5E9B000324092 /* FuzzUserLikes.m in Sources */,
 				45AED2451BB5982D00324092 /* Business.m in Sources */,
 				457536B81BB20B1000F6EAA4 /* FeedViewController.m in Sources */,
+				45E0663B1BBD4DDE00BB9723 /* ParseHandler.m in Sources */,
 				45AED24E1BB5985E00324092 /* BusinessProfile.m in Sources */,
 				457536991BB0A32C00F6EAA4 /* main.m in Sources */,
 				450886161BB0A19D007E8E8D /* ScannerViewController.m in Sources */,

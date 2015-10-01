@@ -6,7 +6,7 @@
 //
 //
 
-#import "User.h"
+#import "FuzzUser.h"
 #import <Parse/PFObject+Subclass.h>
 
 @implementation FuzzUser

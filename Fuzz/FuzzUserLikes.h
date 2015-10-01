@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 
-@interface UserLikes : PFObject <PFSubclassing>
+@interface FuzzUserLikes : PFObject <PFSubclassing>
 
 
 @property (nonatomic, strong) NSMutableArray *tvShows;
