@@ -55,7 +55,7 @@
 		45AED2481BB5984800324092 /* Reward.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED2471BB5984800324092 /* Reward.m */; settings = {ASSET_TAGS = (); }; };
 		45AED24B1BB5984E00324092 /* FuzzUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED24A1BB5984E00324092 /* FuzzUser.m */; settings = {ASSET_TAGS = (); }; };
 		45AED24E1BB5985E00324092 /* BusinessProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED24D1BB5985E00324092 /* BusinessProfile.m */; settings = {ASSET_TAGS = (); }; };
-		45AED2511BB5986600324092 /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED2501BB5986600324092 /* UserProfile.m */; settings = {ASSET_TAGS = (); }; };
+		45AED2511BB5986600324092 /* FuzzUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED2501BB5986600324092 /* FuzzUserProfile.m */; settings = {ASSET_TAGS = (); }; };
 		45AED2541BB5A8D100324092 /* AwardedReward.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED2531BB5A8D100324092 /* AwardedReward.m */; settings = {ASSET_TAGS = (); }; };
 		45AED25A1BB5B9E800324092 /* Scan.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED2591BB5B9E800324092 /* Scan.m */; settings = {ASSET_TAGS = (); }; };
 		45AED25D1BB5E9B000324092 /* FuzzUserLikes.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AED25C1BB5E9B000324092 /* FuzzUserLikes.m */; settings = {ASSET_TAGS = (); }; };
@@ -136,8 +136,8 @@
 		45AED24A1BB5984E00324092 /* FuzzUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuzzUser.m; sourceTree = "<group>"; };
 		45AED24C1BB5985E00324092 /* BusinessProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessProfile.h; sourceTree = "<group>"; };
 		45AED24D1BB5985E00324092 /* BusinessProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessProfile.m; sourceTree = "<group>"; };
-		45AED24F1BB5986600324092 /* UserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfile.h; sourceTree = "<group>"; };
-		45AED2501BB5986600324092 /* UserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfile.m; sourceTree = "<group>"; };
+		45AED24F1BB5986600324092 /* FuzzUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuzzUserProfile.h; sourceTree = "<group>"; };
+		45AED2501BB5986600324092 /* FuzzUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuzzUserProfile.m; sourceTree = "<group>"; };
 		45AED2521BB5A8D100324092 /* AwardedReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwardedReward.h; sourceTree = "<group>"; };
 		45AED2531BB5A8D100324092 /* AwardedReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwardedReward.m; sourceTree = "<group>"; };
 		45AED2581BB5B9E800324092 /* Scan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scan.h; sourceTree = "<group>"; };
@@ -310,10 +310,10 @@
 				45AED2591BB5B9E800324092 /* Scan.m */,
 				45AED2491BB5984E00324092 /* FuzzUser.h */,
 				45AED24A1BB5984E00324092 /* FuzzUser.m */,
+				45AED24F1BB5986600324092 /* FuzzUserProfile.h */,
+				45AED2501BB5986600324092 /* FuzzUserProfile.m */,
 				45AED25B1BB5E9B000324092 /* FuzzUserLikes.h */,
 				45AED25C1BB5E9B000324092 /* FuzzUserLikes.m */,
-				45AED24F1BB5986600324092 /* UserProfile.h */,
-				45AED2501BB5986600324092 /* UserProfile.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -467,7 +467,7 @@
 			files = (
 				45AED24B1BB5984E00324092 /* FuzzUser.m in Sources */,
 				457536A51BB1CFDF00F6EAA4 /* TabBarViewController.m in Sources */,
-				45AED2511BB5986600324092 /* UserProfile.m in Sources */,
+				45AED2511BB5986600324092 /* FuzzUserProfile.m in Sources */,
 				450886141BB0A19D007E8E8D /* AppDelegate.m in Sources */,
 				45AED1EF1BB478B200324092 /* ScannerSingleton.m in Sources */,
 				45AED25D1BB5E9B000324092 /* FuzzUserLikes.m in Sources */,

@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
-#import "UserProfile.h"
+#import "FuzzUserProfile.h"
 
 @interface FuzzUser : PFUser <PFSubclassing>
 
-@property (nonatomic, strong) UserProfile *userProfile;
+@property (nonatomic, strong) FuzzUserProfile *userProfile;
 
 // scanned scan class has user pointer
 // Full of Scan class
@@ -20,5 +20,7 @@
 
 // Full of Awarded Rewards
 @property (nonatomic, strong) NSMutableArray *rewards;
+
+- (instancetype)initWithUserProfile:(FuzzUserProfile *)profile email:(NSString *)email password:(NSString *)password scans:(NSMutableArray *)scans rewards:(NSMutableArray *)rewards;
 
 @end

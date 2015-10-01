@@ -20,5 +20,6 @@
 @property (nonatomic, strong) NSString *instagram;
 @property (nonatomic, strong) NSData *logo;
 
+- (instancetype)initWithName:(NSString *)name location:(NSString *)location phoneNumber:(NSString *)phoneNumber website:(NSString *)website facebook:(NSString *)facebook twitter:(NSString *)twitter instagram:(NSString *)instagram logo:(NSData *)logo;
 
 @end

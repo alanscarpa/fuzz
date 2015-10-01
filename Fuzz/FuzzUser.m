@@ -19,10 +19,24 @@
 }
 
 
-+(NSString*)parseClassName
++ (NSString*)parseClassName
 {
     return @"User";
 }
+
+- (instancetype)initWithUserProfile:(FuzzUserProfile *)profile email:(NSString *)email password:(NSString *)password scans:(NSMutableArray *)scans rewards:(NSMutableArray *)rewards {
+    self = [super init];
+    if (self) {
+        self.username = email;
+        self.password = password;
+        self.email = email;
+        self.userProfile = profile;
+        self.scans = scans;
+        self.rewards = rewards;
+    }
+    return self;
+}
+
 
 
 @end

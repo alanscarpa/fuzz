@@ -12,8 +12,9 @@
 #import "BusinessProfile.h"
 #import "Reward.h"
 #import "FuzzUser.h"
-#import "UserProfile.h"
+#import "FuzzUserProfile.h"
 #import "AwardedReward.h"
+#import "ParseHandler.h"
 
 @interface FeedViewController ()
 
@@ -45,63 +46,28 @@
     
     
     
-    // put reward in user rewards array
-    //[self registerBusiness];
+    //[self registerNewBusiness];
+    //[self registerNewFuzzUser];
     //[self getReward];
-    [self registerUser];
-    
     
 }
 
--(void)registerUser
-{
-//    User *newUser = [User object];
-//    UserProfile *newUserProfile = [UserProfile object];
-//    newUserProfile.firstName = @"Bob";
-//    newUser.userProfile = newUserProfile;
-//    newUser.rewards = [@[]
-//    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-//        //
-//    }];
-    
+- (void)registerNewBusiness {
+    BusinessProfile *profile = [ParseHandler createBusinessProfile];
+    NSMutableArray *rewards = [ParseHandler createRewards];
+    Business *newBusiness = [ParseHandler createBusinessWithProfile:profile andRewards:rewards];
+    [ParseHandler registerNewBusinessOnParse:newBusiness];
 }
 
--(void)registerBusiness
-{
-    Business *biz = [Business object];
-    biz.averageRevenuePerCustomer = 4;
-    biz.name = @"Coca-Cola";
-    biz.SKU = @"004";
-    
-    BusinessProfile *bizProfile = [BusinessProfile object];
-    bizProfile.name = @"Coca-Cola";
-    
-    biz.businessProfile = bizProfile;
-    
-    Reward *reward = [Reward object];
-    reward.title = @"Free Soda!";
-    reward.description = @"One free soda";
-    reward.ableToWinToday = YES;
-    reward.amountAvailable = 100;
-    reward.winTime = [NSDate date];
-    
-    biz.rewards = [@[reward] mutableCopy];
-    
-    [biz saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-        if (succeeded){
-            NSLog(@"Saved custom thing!!");
-            
-            
-        } else {
-            NSLog(@"Errrrrror: %@", error);
-        }
-    }];
- 
+
+-(void)registerNewFuzzUser {
+    FuzzUserProfile *newProfile = [ParseHandler createNewUserProfile];
+    FuzzUser *newUser = [ParseHandler createNewUserWithProfile:newProfile email:@"test@g.com" password:@"test"];
+    [ParseHandler registerNewUserOnParse:newUser];
 }
 
--(void)getReward
-{
-    
+
+-(void)getReward {
     PFQuery *query = [PFQuery queryWithClassName:@"Business"];
     [query includeKey:@"rewards"];
     [query includeKey:@"businessProfile"];
@@ -135,7 +101,7 @@
                         //
                         
                         FuzzUser *newUser = [FuzzUser object];
-                        UserProfile *newUserProfile = [UserProfile object];
+                        FuzzUserProfile *newUserProfile = [FuzzUserProfile object];
                         newUserProfile.firstName = @"Bob";
                         newUser.userProfile = newUserProfile;
                         
