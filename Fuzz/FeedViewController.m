@@ -18,7 +18,6 @@
 
 @interface FeedViewController ()
 
-
 @end
 
 @implementation FeedViewController
@@ -44,6 +43,19 @@
     // -1 amountAvailble
     // reset reward winTime at 12am - set between 6am and 10pm
     
+    
+    // -------- Step 1) --------
+    // Create a new user
+    // -------- Step 2) --------
+    // Log in user
+    // Have them scan logo
+    // Win reward
+    // Update reward status on Parse
+    // Save reward to user's awarded reward on Parse and locally with Core data
+    // -------- Step 3) --------
+    // View user's awarded rewards
+    // -------- Step 4) --------
+    // Press Redeem Now Button to delete from users rewarded awards
     
     
     //[self registerNewBusiness];
@@ -75,11 +87,10 @@
     
     [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
        // NSLog(@"%@", objects[0][@"businessProfile"][@"name"]);
-        if ([objects[0][@"rewards"] count]>0){
+        if ([objects[0][@"rewards"] count] > 0){
             
             NSMutableArray *validRewards = [@[] mutableCopy];
             for (PFObject *reward in objects[0][@"rewards"]){
-                
                 if ([reward[@"ableToWinToday"] isEqual:@YES]){
                     [validRewards addObject:reward];
                 }
@@ -91,15 +102,13 @@
                 if ([[NSDate date] timeIntervalSince1970] > [validRewards[0][@"winTime"] timeIntervalSince1970]) {
                     
                     NSLog(@"Congratulations!  You've won! \n%@\n%@",objects[0][@"rewards"][0][@"title"], objects[0][@"rewards"][0][@"description"]);
-                    validRewards[0][@"ableToWinToday"] = @NO;
                     
+                    validRewards[0][@"ableToWinToday"] = @NO;
                     
                     // set random time for reward
                     // write a script that sets ableToWinToday to @YES every morning at 12am
                     
                     [validRewards[0] saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-                        //
-                        
                         FuzzUser *newUser = [FuzzUser object];
                         FuzzUserProfile *newUserProfile = [FuzzUserProfile object];
                         newUserProfile.firstName = @"Bob";
@@ -118,14 +127,8 @@
     }];
 }
 
--(BOOL)prefersStatusBarHidden
-{
+-(BOOL)prefersStatusBarHidden {
     return YES;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*

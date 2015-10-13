@@ -10,8 +10,7 @@
 
 @implementation UIImage (Overlay)
 
-- (UIImage *)imageWithColor:(UIColor *)color1
-{
+- (UIImage *)imageWithColor:(UIColor *)color1 {
     UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextTranslateCTM(context, 0, self.size.height);
@@ -26,15 +25,13 @@
     return newImage;
 }
 
-+(UIImage *) makeImageWithColor:(UIColor*)color andSize:(CGSize)size
-{
++(UIImage *) makeImageWithColor:(UIColor*)color andSize:(CGSize)size {
     UIGraphicsBeginImageContextWithOptions(size, false, 0);
     [color setFill];
     UIRectFill(CGRectMake(0, 0, size.width, size.height));
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;
-    
 }
 
 

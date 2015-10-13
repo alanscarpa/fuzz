@@ -20,48 +20,37 @@ static int kMSResultTypes = MSResultTypeImage  |
 }
 
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     _scannerSingleton = [ScannerSingleton init];
     [self setUpUI];
     [self initializeScanner];
-
-
 }
 
--(BOOL)prefersStatusBarHidden
-{
+-(BOOL)prefersStatusBarHidden {
     return YES;
 }
 
--(void)setUpUI
-{
-    
+-(void)setUpUI {
     [self setUpScannerOverlay];
     self.notScanningButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     self.notScanningButton.titleLabel.minimumScaleFactor = 0.7;
     self.notScanningButton.titleLabel.textAlignment = NSTextAlignmentCenter;
-    
 }
 
 
--(void)viewWillAppear:(BOOL)animated
-{
+-(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
 }
 
--(void)setUpScannerOverlay
-{
+-(void)setUpScannerOverlay {
     self.scanBounds.backgroundColor = [UIColor clearColor];
     self.scanBounds.layer.borderWidth = 3.0f;
     self.scanBounds.layer.borderColor = [UIColor colorWithRed:229/255.0f green:68/255.0f blue:0/255.0f alpha:1].CGColor;
 }
 
--(void)initializeScanner
-{
-
+-(void)initializeScanner {
     _scannerSingleton.scannerSession.delegate = self;
     _scannerSingleton.scannerSession.resultTypes = kMSResultTypes;
 
@@ -78,43 +67,19 @@ static int kMSResultTypes = MSResultTypeImage  |
 
 #pragma mark - MSAutoScannerSessionDelegate
 
-- (void)session:(id)scannerSession didFindResult:(MSResult *)result
-{
-    
+- (void)session:(id)scannerSession didFindResult:(MSResult *)result {
     NSString *type = [result type] == MSResultTypeImage ? @"Image" : @"Barcode";
     NSString *message = [NSString stringWithFormat:@"%@", [result string]];
-    
-    
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:type message:message preferredStyle:UIAlertControllerStyleActionSheet];
-    
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [_scannerSingleton.scannerSession resumeProcessing];
     }];
-    
     [alert addAction:ok];
     [self presentViewController:alert animated:YES completion:nil];
-    
 }
 
-
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-- (void)dealloc
-{
+- (void)dealloc {
     [_scannerSingleton.scannerSession stopRunning];
 }
-
-
-
-
-
-
 
 @end

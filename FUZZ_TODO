@@ -1,6 +1,7 @@
 FUZZ - TODO
 [] Implement custom Parse analytics events all through app
 [] Decrease tab bar height
+[] Save rewards to coredata
 
 BLOG IDEAS
 [] Subclass custom objects and save to Parse

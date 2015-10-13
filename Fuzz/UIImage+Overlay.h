@@ -12,4 +12,5 @@
 
 - (UIImage *)imageWithColor:(UIColor *)color1;
 + (UIImage *)makeImageWithColor:(UIColor*)color andSize:(CGSize)size;
+
 @end
